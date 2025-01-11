@@ -10,6 +10,11 @@ import { pragmatistQuotes } from './categories/modern_pragmatists'
 import { historicalQuotes } from './categories/historical'
 import { indigenousQuotes } from './categories/indigenous'
 import { comedyQuotes } from './categories/comedy'
+import { engineerQuotes } from './categories/makers/engineers'
+import { artistQuotes } from './categories/makers/artists'
+import { medicalQuotes } from './categories/medical'
+import { systemQuotes } from './categories/systems'
+import { epistemologyQuotes } from './categories/epistemology'
 
 const allQuotes = [
   ...survivalQuotes,
@@ -23,7 +28,12 @@ const allQuotes = [
   ...pragmatistQuotes,
   ...historicalQuotes,
   ...indigenousQuotes,
-  ...comedyQuotes
+  ...comedyQuotes,
+  ...engineerQuotes,
+  ...artistQuotes,
+  ...medicalQuotes,
+  ...systemQuotes,
+  ...epistemologyQuotes
 ]
 
 export default allQuotes
