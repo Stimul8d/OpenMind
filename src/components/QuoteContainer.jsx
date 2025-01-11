@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { AnimatePresence } from 'framer-motion'
 import Quote from './Quote'
+import Logo from './Logo'
 import quotes from '../data/quotes'
 import QuoteManager from '../utils/quoteManager'
 
@@ -31,6 +32,7 @@ const QuoteContainer = () => {
 
   return (
     <div className={`min-h-screen transition-colors duration-2000 ${colours[currentColour]}`}>
+      <Logo className="fixed top-6 left-6 text-white opacity-75 hover:opacity-100 transition-opacity" />
       <AnimatePresence mode="wait">
         <Quote 
           key={currentQuote.text} 
