@@ -5,14 +5,14 @@ const quotes = [
     category: "Philosophy"
   },
   {
-    text: "What you seek is seeking you",
-    source: "Rumi",
-    category: "Poetry"
+    text: "Between stimulus and response there is a space. In that space is our power to choose our response.",
+    source: "Viktor Frankl",
+    category: "Psychology"
   },
   {
-    text: "The impediment to action advances action. What stands in the way becomes the way",
-    source: "Marcus Aurelius",
-    category: "Stoicism"
+    text: "The mind is not a vessel to be filled, but a fire to be kindled",
+    source: "Plutarch",
+    category: "Education"
   }
 ]
 
