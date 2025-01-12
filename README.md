@@ -1,72 +1,116 @@
 # OpenMind
 
-Modern life's messy. Between social media noise, workplace chaos, and general uncertainty, finding genuine wisdom is harder than it should be. This project cuts through that.
+A distraction-free space for meaningful insights. No empty platitudes, no Instagram philosophy - just wisdom that actually helps.
 
-## What's Different Here
+## Why?
 
-We're collecting insights that actually help - proper, universal wisdom that works regardless of your background or beliefs. No mystical waffle, no Instagram philosophy, no empty platitudes.
+Finding genuine wisdom is harder than it should be. This project cuts through the noise by collecting insights that:
+- Actually solve real problems
+- Work regardless of your beliefs
+- Have stood the test of time
+- Combat anxiety, depression and existential worry
 
-Sources include:
-- Philosophy (minus the academic faff)
-- Science (the useful bits)
-- Religious texts (the universal insights)
-- Survival stories (because nothing cuts through like real experience)
-- Engineering wisdom (people who build things)
-- Historical figures (who faced proper challenges)
-- Indigenous knowledge (tested over generations)
-- Comedy (because sometimes jesters see clearest)
-
-Each quote needs to:
-- Actually help with real problems
-- Work without believing in anything specific
-- Have proper context
-- Stand up to scrutiny
-
-## The Tech
-
-Built with:
-```bash
-React + Vite        # Fast builds, clean setup
-Framer Motion       # Smooth transitions
-Tailwind           # Styling without the mess
-GitHub Pages       # Simple hosting
-```
-
-## Running It
+## Running Locally
 
 ```bash
-# Get it
-git clone git@github.com:your-username/OpenMind.git
+# Clone the repository
+git clone git@github.com:stimul8d/OpenMind.git
 
-# Install
-cd OpenMind && npm install
+# Install dependencies
+npm install
 
-# Run locally
+# Start dev server
 npm run dev
-
-# Deploy
-git push main      # That's it. GitHub Actions handles the rest
 ```
+
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── Quote.jsx           # Quote display component
+│   ├── QuoteContainer.jsx  # Manages quote cycling
+│   └── Logo.jsx           # Site branding
+├── data/
+│   └── quotes/
+│       ├── categories/    # Quote sources
+│       │   ├── survival.js
+│       │   ├── science.js
+│       │   ├── religion/
+│       │   │   ├── buddhism.js
+│       │   │   └── taoism.js
+│       │   └── ... more categories
+│       └── index.js      # Combines sources
+├── utils/
+│   └── quoteManager.js   # Quote selection logic
+├── App.jsx
+└── main.jsx
+```
+
+## Categories
+
+Drawing from multiple sources:
+
+1. Philosophy & Thought
+   - Ancient Stoics
+   - Eastern Philosophy
+   - Modern Thinkers
+   - Outsiders & Critics
+
+2. Science & Method
+   - Physicists
+   - Biologists
+   - Systems Thinkers
+   - Medical Insights
+
+3. Experience & Survival
+   - Mountain Climbers
+   - War Survivors
+   - Crisis Leaders
+   - Emergency Responders
+
+4. Creative & Arts
+   - Writers
+   - Musicians
+   - Comedians
+   - Film & Theatre
 
 ## Contributing
 
-Got something genuinely useful to add? Brilliant. Check `src/data/quotes` for the category structure. Each quote needs:
+### Adding Quotes
 
-- Text (obviously)
-- Source (properly attributed)
-- Context (why it matters)
-- Tags (for filtering)
+Add quotes to `src/data/quotes/categories/`. Each quote needs:
 
-Skip anything that:
-- Needs belief in a system
-- Sounds good but doesn't help
-- Oversimplifies human struggle
-- Makes promises it can't keep
+```javascript
+{
+  text: "The actual quote",
+  source: "Who said it",
+  context: "Why it matters/when it was said",
+  tags: ["relevant", "tags"]
+}
+```
 
-## Project Status
+Guidelines:
+- Must be properly attributed
+- Should help with real problems
+- Needs clear context
+- No mystical/religious requirements
 
-This is deliberately minimal. No fancy features, no complex architecture - just good ideas presented clearly. Might add categories and filtering later, but the core purpose won't change.
+### Code Contributions
 
-## Licence
+Focus areas:
+- Better quote categorisation
+- Improved transitions
+- Thoughtful colour schemes
+- Mobile optimisation
+
+## Tech Stack
+
+- React + Vite
+- Framer Motion for transitions
+- Tailwind CSS
+- GitHub Pages
+
+## License
 
 MIT - do what you want with it.

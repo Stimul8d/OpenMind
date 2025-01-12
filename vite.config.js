@@ -6,10 +6,6 @@ export default defineConfig({
   base: '/OpenMind/',
   build: {
     outDir: 'dist',
-    rollupOptions: {
-      output: {
-        manualChunks: undefined
-      }
-    }
+    assetsDir: 'assets'
   }
 })
