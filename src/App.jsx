@@ -1,9 +1,10 @@
-import { useState } from 'react'
+import Header from './components/Header'
 import QuoteContainer from './components/QuoteContainer'
 
 function App() {
   return (
-    <div className="min-h-screen bg-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-violet-600 to-blue-500">
+      <Header />
       <QuoteContainer />
     </div>
   )
