@@ -1,39 +1,45 @@
-import { survivalQuotes } from './categories/survival'
-import { scienceQuotes } from './categories/science'
-import { buddhismQuotes } from './categories/religion/buddhism'
-import { taoismQuotes } from './categories/religion/taoism'
-import { sportQuotes } from './categories/sport'
-import { mentalModelQuotes } from './categories/mental_models'
-import { outsiderQuotes } from './categories/outsiders'
-import { literatureQuotes } from './categories/literature'
-import { pragmatistQuotes } from './categories/modern_pragmatists'
-import { historicalQuotes } from './categories/historical'
-import { indigenousQuotes } from './categories/indigenous'
-import { comedyQuotes } from './categories/comedy'
-import { engineerQuotes } from './categories/makers/engineers'
-import { artistQuotes } from './categories/makers/artists'
-import { medicalQuotes } from './categories/medical'
-import { systemQuotes } from './categories/systems'
-import { epistemologyQuotes } from './categories/epistemology'
+import { survivalQuotes } from './survival'
+import { scienceQuotes } from './science'
+import { religionQuotes } from './religion'
+import { sportQuotes } from './sport'
+import { mentalModelQuotes } from './mental_models'
+import { outsiderQuotes } from './outsiders'
+import { literatureQuotes } from './literature'
+import { modernPragmatistQuotes } from './modern_pragmatists'
+import { historicalQuotes } from './historical'
+import { indigenousQuotes } from './indigenous'
+import { comedyQuotes } from './comedy'
+import { medicalQuotes } from './medical'
+import { systemsQuotes } from './systems'
+import { epistemologyQuotes } from './epistemology'
+import { businessQuotes } from './business'
+import { buddhismQuotes } from './buddhism'
+import { taoismQuotes } from './taoism'
+import { artistQuotes } from './artists'
+import { engineerQuotes } from './engineers'
+import { ancientQuotes } from './ancient'
 
 const allQuotes = [
   ...survivalQuotes,
   ...scienceQuotes,
-  ...buddhismQuotes,
-  ...taoismQuotes,
+  ...religionQuotes,
   ...sportQuotes,
   ...mentalModelQuotes,
   ...outsiderQuotes,
   ...literatureQuotes,
-  ...pragmatistQuotes,
+  ...modernPragmatistQuotes,
   ...historicalQuotes,
   ...indigenousQuotes,
   ...comedyQuotes,
-  ...engineerQuotes,
-  ...artistQuotes,
   ...medicalQuotes,
-  ...systemQuotes,
-  ...epistemologyQuotes
+  ...systemsQuotes,
+  ...epistemologyQuotes,
+  ...businessQuotes,
+  ...buddhismQuotes,
+  ...taoismQuotes,
+  ...artistQuotes,
+  ...engineerQuotes,
+  ...ancientQuotes
 ]
 
 export default allQuotes

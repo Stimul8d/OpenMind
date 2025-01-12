@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { AnimatePresence } from 'framer-motion'
 import Quote from './Quote'
-import quotes from '../data/quotes'
+import quotes from '../data/quotes/index'
 import QuoteManager from '../utils/quoteManager'
 
 const gradients = [
