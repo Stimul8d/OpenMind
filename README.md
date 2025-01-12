@@ -2,13 +2,52 @@
 
 A distraction-free space for meaningful insights. No empty platitudes, no Instagram philosophy - just wisdom that actually helps.
 
-## Why?
+## Core Features
 
-Finding genuine wisdom is harder than it should be. This project cuts through the noise by collecting insights that:
-- Actually solve real problems
-- Work regardless of your beliefs
-- Have stood the test of time
-- Combat anxiety, depression and existential worry
+- Clean, minimalist interface
+- Floating background animations
+- Curated quotes from diverse sources
+- Category-based filtering
+- Mobile-first design
+
+## Tech Stack
+
+- React 18 + Vite
+- Tailwind CSS for styling
+- Framer Motion for transitions
+- GitHub Pages for deployment
+
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── FloatingShapes.jsx  # Background animation
+│   ├── Header.jsx          # Site title
+│   ├── QuoteContainer.jsx  # Quote display & cycling
+├── data/
+│   └── quotes/
+│       ├── categories/     # Quote collections
+│       │   ├── comedy.js
+│       │   ├── epistemology.js
+│       │   ├── historical.js
+│       │   ├── indigenous.js
+│       │   ├── literature.js
+│       │   ├── medical.js
+│       │   ├── mental_models.js
+│       │   ├── modern_pragmatists.js
+│       │   ├── outsiders.js
+│       │   ├── religion/
+│       │   ├── science.js
+│       │   ├── sport.js
+│       │   ├── survival.js
+│       │   └── systems.js
+│       └── index.js        # Quote aggregation
+├── utils/
+│   └── quoteManager.js     # Quote selection logic
+├── App.jsx                 # Main app wrapper
+└── main.jsx               # Entry point
+```
 
 ## Running Locally
 
@@ -23,57 +62,33 @@ npm install
 npm run dev
 ```
 
-## Project Structure
+## Quote Categories
 
-```
-src/
-├── components/
-│   ├── Quote.jsx           # Quote display component
-│   ├── QuoteContainer.jsx  # Manages quote cycling
-│   └── Logo.jsx           # Site branding
-├── data/
-│   └── quotes/
-│       ├── categories/    # Quote sources
-│       │   ├── survival.js
-│       │   ├── science.js
-│       │   ├── religion/
-│       │   │   ├── buddhism.js
-│       │   │   └── taoism.js
-│       │   └── ... more categories
-│       └── index.js      # Combines sources
-├── utils/
-│   └── quoteManager.js   # Quote selection logic
-├── App.jsx
-└── main.jsx
-```
+Our quotes come from several key areas:
 
-## Categories
+1. Philosophical & Scientific
+   - Epistemology
+   - Mental Models
+   - Scientific Method
+   - Systems Thinking
 
-Drawing from multiple sources:
+2. Historical & Cultural
+   - Indigenous Wisdom
+   - Historical Figures
+   - Religious Texts (secular perspective)
+   - Cultural Insights
 
-1. Philosophy & Thought
-   - Ancient Stoics
-   - Eastern Philosophy
-   - Modern Thinkers
-   - Outsiders & Critics
+3. Modern & Practical
+   - Medical Knowledge
+   - Sports Psychology
+   - Survival Stories
+   - Modern Pragmatists
 
-2. Science & Method
-   - Physicists
-   - Biologists
-   - Systems Thinkers
-   - Medical Insights
-
-3. Experience & Survival
-   - Mountain Climbers
-   - War Survivors
-   - Crisis Leaders
-   - Emergency Responders
-
-4. Creative & Arts
-   - Writers
-   - Musicians
-   - Comedians
-   - Film & Theatre
+4. Creative & Alternative
+   - Comedy & Humour
+   - Literature
+   - Outsider Perspectives
+   - Alternative Viewpoints
 
 ## Contributing
 
@@ -90,27 +105,50 @@ Add quotes to `src/data/quotes/categories/`. Each quote needs:
 }
 ```
 
-Guidelines:
+Requirements:
 - Must be properly attributed
 - Should help with real problems
 - Needs clear context
 - No mystical/religious requirements
+- Verifiable source where possible
 
 ### Code Contributions
 
-Focus areas:
-- Better quote categorisation
-- Improved transitions
-- Thoughtful colour schemes
+Priority areas:
+- Quote categorisation improvements
 - Mobile optimisation
+- Accessibility enhancements
+- Performance tweaks
 
-## Tech Stack
+## Performance Considerations
 
-- React + Vite
-- Framer Motion for transitions
-- Tailwind CSS
-- GitHub Pages
+The app is intentionally lightweight:
+- No heavy frameworks
+- Minimal dependencies
+- Static hosting
+- Client-side only
+
+## Browser Support
+
+Tested and working on:
+- Chrome 90+
+- Firefox 88+
+- Safari 14+
+- Edge 90+
 
 ## License
 
-MIT - do what you want with it.
+MIT - Use it however you want.
+
+## Roadmap
+
+Planned features:
+1. Search functionality
+2. Quote sharing
+3. Category filtering
+4. Dark/light themes
+5. Offline support
+
+## Contact
+
+Issues and PRs welcome via GitHub.
