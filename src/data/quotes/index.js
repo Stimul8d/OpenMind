@@ -19,27 +19,30 @@ import { artistQuotes } from './artists'
 import { engineerQuotes } from './engineers'
 import { ancientQuotes } from './ancient'
 
+// Add categories to each quote array
+const addCategory = (quotes, category) => quotes.map(quote => ({ ...quote, category }))
+
 const allQuotes = [
-  ...survivalQuotes,
-  ...scienceQuotes,
-  ...religionQuotes,
-  ...sportQuotes,
-  ...mentalModelQuotes,
-  ...outsiderQuotes,
-  ...literatureQuotes,
-  ...modernPragmatistQuotes,
-  ...historicalQuotes,
-  ...indigenousQuotes,
-  ...comedyQuotes,
-  ...medicalQuotes,
-  ...systemsQuotes,
-  ...epistemologyQuotes,
-  ...businessQuotes,
-  ...buddhismQuotes,
-  ...taoismQuotes,
-  ...artistQuotes,
-  ...engineerQuotes,
-  ...ancientQuotes
+  ...addCategory(survivalQuotes, "Survival"),
+  ...addCategory(scienceQuotes, "Science"),
+  ...addCategory(religionQuotes, "Religion"),
+  ...addCategory(sportQuotes, "Sport Psychology"),
+  ...addCategory(mentalModelQuotes, "Mental Models"),
+  ...addCategory(outsiderQuotes, "Outsider Wisdom"),
+  ...addCategory(literatureQuotes, "Literature"),
+  ...addCategory(modernPragmatistQuotes, "Modern Pragmatism"),
+  ...addCategory(historicalQuotes, "Historical Wisdom"),
+  ...addCategory(indigenousQuotes, "Indigenous Wisdom"),
+  ...addCategory(comedyQuotes, "Comedy"),
+  ...addCategory(medicalQuotes, "Medical"),
+  ...addCategory(systemsQuotes, "System Thinking"),
+  ...addCategory(epistemologyQuotes, "Epistemology"),
+  ...addCategory(businessQuotes, "Business"),
+  ...addCategory(buddhismQuotes, "Buddhism"),
+  ...addCategory(taoismQuotes, "Taoism"),
+  ...addCategory(artistQuotes, "Art"),
+  ...addCategory(engineerQuotes, "Engineering"),
+  ...addCategory(ancientQuotes, "Ancient Wisdom")
 ]
 
 export default allQuotes

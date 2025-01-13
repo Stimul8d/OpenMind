@@ -28,47 +28,6 @@ const gradients = [
   ['rgb(34, 197, 94)', 'rgb(20, 184, 166)']       // green -> teal
 ]
 
-const categoryMap = {
-  'systems': 'System Thinking',
-  'epistemology': 'Epistemology',
-  'religion': 'Religion',
-  'buddhism': 'Buddhism',
-  'taoism': 'Taoism',
-  'science': 'Science',
-  'sport': 'Sport Psychology',
-  'mental_models': 'Mental Models',
-  'outsiders': 'Outsider Wisdom',
-  'literature': 'Literature',
-  'modern_pragmatists': 'Modern Pragmatism',
-  'historical': 'Historical Wisdom',
-  'indigenous': 'Indigenous Wisdom',
-  'comedy': 'Comedy',
-  'makers': 'Makers',
-  'medical': 'Medical',
-  'business': 'Business',
-  'artists': 'Art',
-  'engineers': 'Engineering',
-  'ancient': 'Ancient Wisdom',
-  'film': 'Film & TV',
-  'music': 'Music'
-}
-
-const getQuoteCategory = (quote) => {
-  // Try to find the quote in one of our category arrays
-  for (const [key, displayName] of Object.entries(categoryMap)) {
-    if (quote.tags && quote.tags.includes(key)) return displayName
-  }
-  
-  // Try to identify through the quote's properties
-  if (quote.tags && quote.tags.length > 0) {
-    const firstTag = quote.tags[0]
-    if (categoryMap[firstTag]) return categoryMap[firstTag]
-  }
-  
-  // If we can't determine the category, use a default
-  return 'Wisdom'
-}
-
 const QuoteContainer = () => {
   const [currentQuote, setCurrentQuote] = useState(null)
   const [progress, setProgress] = useState(0)
@@ -78,10 +37,7 @@ const QuoteContainer = () => {
   
   useEffect(() => {
     const nextQuote = quoteManager.current.getNext()
-    setCurrentQuote({
-      ...nextQuote,
-      category: getQuoteCategory(nextQuote)
-    })
+    setCurrentQuote(nextQuote)
 
     const startTime = Date.now()
     
@@ -94,10 +50,7 @@ const QuoteContainer = () => {
     
     const interval = setInterval(() => {
       const nextQuote = quoteManager.current.getNext()
-      setCurrentQuote({
-        ...nextQuote,
-        category: getQuoteCategory(nextQuote)
-      })
+      setCurrentQuote(nextQuote)
     }, cycleLength)
     
     animationFrameRef.current = requestAnimationFrame(animate)
