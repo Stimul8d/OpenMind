@@ -73,7 +73,10 @@ const Quote = ({ text, source, context, isTransitioning }) => {
         exit="exit"
         className="fixed bottom-0 left-0 w-full text-center mb-8"
       >
-        <p className="text-white text-lg">{source}{context && ` - ${context}`}</p>
+        <p className="text-white text-lg">
+          <span className="font-bold">{source}</span>
+          {context && <span> - {context}</span>}
+        </p>
       </motion.footer>
     </motion.div>
   )
